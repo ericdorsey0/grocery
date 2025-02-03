@@ -26,6 +26,8 @@ const inventory = [
  */
 function logNames(items) {
   // TODO: use `forEach`
+
+  inventory.forEach((items) => console.log(items));
 }
 
 /**
@@ -33,6 +35,8 @@ function logNames(items) {
  * @returns {string[]} an array of item names in all uppercase
  */
 function getUppercaseNames(items) {
+  return inventory.map(item => item.name.toUpperCase());
+  
   // TODO: use `map`
 }
 
@@ -43,6 +47,7 @@ function getUppercaseNames(items) {
  */
 function getItemById(items, id) {
   // TODO: use `find`
+  return items.find(item => item.id === id);
 }
 
 /**
@@ -52,6 +57,13 @@ function getItemById(items, id) {
  */
 function getItemPriceByName(items, name) {
   // TODO: use a loop!
+ 
+  for (const item of items) {
+    if (item.name === name) {
+      return item.price;
+    }
+  }
+  return undefined; 
 }
 
 /**
@@ -61,6 +73,8 @@ function getItemPriceByName(items, name) {
  */
 function getItemsByCategory(items, category) {
   // TODO: use `filter`
+
+  return inventory.filter((items) => items.category === category);
 }
 
 /**
@@ -69,6 +83,7 @@ function getItemsByCategory(items, category) {
  */
 function countItems(items) {
   // TODO: use `reduce`
+  
 }
 
 /**
