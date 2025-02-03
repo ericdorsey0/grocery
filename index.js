@@ -92,6 +92,7 @@ function countItems(items) {
  */
 function getTotalPrice(items) {
   // TODO: use `reduce`
+  return inventory.reduce((total, items) => total + items.price, 0);
 }
 
 // === READ BUT DO NOT CHANGE THE CODE BELOW ===
