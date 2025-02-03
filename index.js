@@ -83,7 +83,7 @@ function getItemsByCategory(items, category) {
  */
 function countItems(items) {
   // TODO: use `reduce`
-  
+ return inventory.reduce((total, items) => total + items.quantity, 0);
 }
 
 /**
